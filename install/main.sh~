@@ -17,7 +17,7 @@ cd $INSTALL_SCRIPTS_DIR
 UR_ERROR=0
 rm log.txt > /dev/null
 
-declare -a arr=("eigen3" "armadillo") # "ur_simulator"
+declare -a arr=("eigen3" "armadillo" "ur_simulator")
 
 echo -e $COLOR_BLUE"Installing ur_ws..."$COLOR_RESET
 
