@@ -43,7 +43,6 @@ int main(int argc, char** argv)
 
   double duration = 6.5;
   std::cout << io_::bold << io_::cyan << "The robot will move to its initial pose in " << duration << " sec.\n" << io_::reset;
-  robot->startLogging();
   robot->setJointsTrajectory(q_start, duration);
   std::cout << io_::bold << io_::cyan << "Initial pose reached!\n" << io_::reset;
   if (!ros::ok()) exit(-1);
