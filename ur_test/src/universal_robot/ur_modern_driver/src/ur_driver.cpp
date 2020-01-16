@@ -28,6 +28,7 @@ UrDriver::UrDriver(std::string host, unsigned int reverse_port, double servoj_ti
 		REVERSE_PORT_(reverse_port), maximum_time_step_(max_time_step), minimum_payload_(min_payload),
 		maximum_payload_(max_payload), servoj_time_(servoj_time), servoj_lookahead_time_(servoj_lookahead_time), servoj_gain_(servoj_gain)
 {
+  joint_vel_cmd = arma::vec().zeros(6,1);
   log_data_ = false;
   t = 0;
   joint_pos = {6, 0.0};
@@ -49,7 +50,7 @@ UrDriver::UrDriver(std::string host, unsigned int reverse_port, double servoj_ti
 	struct sockaddr_in serv_addr;
 	int n, flag;
 
-  joint_offsets_ = {6, 0.0};
+  // joint_offsets_ = {6, 0.0};
 
 	firmware_version_ = 0;
 	reverse_connected_ = false;
@@ -458,7 +459,7 @@ void UrDriver::readRTMsg()
     t = rt_interface_->robot_state_.getControllerTimer();
 
     joint_pos = rt_interface_->robot_state_.getQActual();
-    for (unsigned int i = 0; i < joint_pos.size(); i++) joint_pos[i] += joint_offsets_[i];
+    // for (unsigned int i = 0; i < joint_pos.size(); i++) joint_pos[i] += joint_offsets_[i];
     joint_vel = rt_interface_->robot_state_.getQdActual();
     effort = rt_interface_->robot_state_.getIActual();
     tcp_wrench = rt_interface_->robot_state_.getTcpWrench();

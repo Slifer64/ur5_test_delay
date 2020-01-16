@@ -360,10 +360,10 @@ namespace ur_
       t += getCtrlCycle();
       // update trajectory
       arma::mat ref_traj =  get5thOrder(t, q0, qT, duration);
-      qref = get5thOrder(t, q0, qT, duration).col(0);
-      qref_dot = get5thOrder(t, q0, qT, duration).col(1);
+      qref = ref_traj.col(0);
+      qref_dot = ref_traj.col(1);
 
-      arma::vec q_dot_cmd = qref_dot + click*(qref-q);
+      arma::vec q_dot_cmd = qref_dot; // + click*(qref-q);
 
       this->setJointsVelocity(q_dot_cmd);
 
@@ -372,10 +372,6 @@ namespace ur_
 
       q = this->getJointsPosition();
     }
-
-    std::cerr << "t = " << t << "\n";
-    std::cerr << "qref = " << qref.t() << "\n";
-    std::cerr << "q = " << q.t() << "\n";
 
     // reset last known robot mode
     this->setMode(prev_mode);

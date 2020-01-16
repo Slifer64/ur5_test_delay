@@ -26,8 +26,8 @@ int main(int argc, char** argv)
   robot.reset(new ur_::Robot());
 
   arma::vec q;
-  arma::vec q_start = {4.2,  -1.73,  -2.2,  -0.81,   1.6,  -0.03};
-  arma::vec q_end = {3.2,  -1.43,  -1.8,  -0.81,   1.6,  -0.03};
+  arma::vec q_start = {-1.83, -1.72, -2.19, -0.702, 1.23, 0.2};
+  arma::vec q_end = {-2.23, -1.43, -1.8, -0.81, 1.6, -0.03};
 
   std::cerr << "q_start = " << q_start.t() << "\n";
   std::cerr << "q_end = " << q_end.t() << "\n";
@@ -40,16 +40,17 @@ int main(int argc, char** argv)
 
   robot->waitNextCycle();
   q = robot->getJointsPosition();
-  double duration = std::max(arma::max(arma::abs(q_start-q))*14.0/3.14159, 6.5);
-  std::cout << io_::bold << io_::cyan << "The robot will move to its initial pose in " << duration << " sec.\n" << io_::reset;
 
+  double duration = 6.5;
+  std::cout << io_::bold << io_::cyan << "The robot will move to its initial pose in " << duration << " sec.\n" << io_::reset;
+  robot->startLogging();
   robot->setJointsTrajectory(q_start, duration);
   std::cout << io_::bold << io_::cyan << "Initial pose reached!\n" << io_::reset;
   if (!ros::ok()) exit(-1);
-  
+
   robot->waitNextCycle();
   q = robot->getJointsPosition();
-  duration = std::max(arma::max(arma::abs(q_end-q))*14.0/3.14159, 6.5);
+  duration = 6.5;
   std::cout << io_::bold << io_::cyan << "The robot will move to its final pose in " << duration << " sec.\n" << io_::reset;
   robot->startLogging();
   robot->setJointsTrajectory(q_end, duration);

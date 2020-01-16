@@ -141,7 +141,6 @@ qtcreator-*
 
 # CLion
 ur_test/.idea/
-ur_test/src/.idea/
 ur_test/src/cmake-build-debug/
 
 
