@@ -16,6 +16,7 @@ echo -e $COLOR_CYAN"**********************************"$COLOR_RESET
 echo -e $COLOR_CYAN"*** Universal Robots simulator ***"$COLOR_RESET
 echo -e $COLOR_CYAN"**********************************"$COLOR_RESET
 
+cd ..
 
 if [ ! -d "ur_simulator" ]; then
   mkdir ur_simulator
@@ -41,4 +42,3 @@ sed -i -e 's/versionString\=/versionString\=5 \#/g' ./install.sh
 
 echo -e $COLOR_GREEN"Universal Robots simulator successfully installed!"$COLOR_RESET
 
-cd ..
