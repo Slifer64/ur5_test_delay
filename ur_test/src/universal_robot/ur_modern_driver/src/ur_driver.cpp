@@ -28,7 +28,9 @@ UrDriver::UrDriver(std::string host, unsigned int reverse_port, double servoj_ti
 		REVERSE_PORT_(reverse_port), maximum_time_step_(max_time_step), minimum_payload_(min_payload),
 		maximum_payload_(max_payload), servoj_time_(servoj_time), servoj_lookahead_time_(servoj_lookahead_time), servoj_gain_(servoj_gain)
 {
+	joint_pos_cmd = arma::vec().zeros(6,1);
   joint_vel_cmd = arma::vec().zeros(6,1);
+
   log_data_ = false;
   t = 0;
   joint_pos = {6, 0.0};
@@ -449,6 +451,8 @@ void UrDriver::readRTMsg()
 
   n_data = 0;
   time_data.resize(2000);
+	joint_pos_data.resize(6, 2000);
+  joint_pos_cmd_data.resize(6, 2000);
   joint_vel_data.resize(6, 2000);
   joint_vel_cmd_data.resize(6, 2000);
 
@@ -510,6 +514,10 @@ void UrDriver::readRTMsg()
 //      //joint_target_vel_data = arma::join_horiz(joint_target_vel_data, arma::vec{joint_target_vel});
 //      joint_vel_cmd_data = arma::join_horiz(joint_vel_cmd_data, arma::vec{joint_vel_cmd});
       time_data(n_data) = global_timer.elapsedMilliSec();
+
+			joint_pos_data.col(n_data) = arma::vec{joint_pos};
+      joint_pos_cmd_data.col(n_data) = arma::vec{joint_pos_cmd};
+
       joint_vel_data.col(n_data) = arma::vec{joint_vel};
       joint_vel_cmd_data.col(n_data) = arma::vec{joint_vel_cmd};
       n_data++;

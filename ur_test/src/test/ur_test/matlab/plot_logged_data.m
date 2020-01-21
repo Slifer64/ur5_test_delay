@@ -10,9 +10,26 @@ if (fid < 0), error('Faile to open %s\n', filename); end
 
 Time = read_mat(fid);
 Time = (Time - Time(1))/1000;
+q_data = read_mat(fid);
 dq_data = read_mat(fid);
 % dq_target_data = read_mat(fid);
+q_cmd_data = read_mat(fid);
 dq_cmd_data = read_mat(fid);
+
+
+%% ========== position ==============
+for i=1:2
+
+    figure;
+    hold on;
+    plot(q_data(i,:), 'LineWidth',1.5, 'Color','blue');
+    plot(q_cmd_data(i,:), 'LineWidth',1.5, 'Color','magenta');
+    hold off;
+    
+end
+
+
+%% ========== velocity =============
 
 for i=1:2
 
@@ -24,6 +41,7 @@ for i=1:2
     hold off;
     
 end
+
 
 for i=1:2
 

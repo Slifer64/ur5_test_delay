@@ -313,12 +313,16 @@ namespace ur_
     if (!out) throw std::ios_base::failure("[ur_::Robot::saveLoggedData]: Couldn't create file \"" + filename + "\"...\n");
 
     ur_driver->time_data.resize(ur_driver->n_data);
+    ur_driver->joint_pos_data.resize(6, ur_driver->n_data);
+    ur_driver->joint_pos_cmd_data.resize(6, ur_driver->n_data);
     ur_driver->joint_vel_data.resize(6, ur_driver->n_data);
     ur_driver->joint_vel_cmd_data.resize(6, ur_driver->n_data);
 
     io_::write_mat(ur_driver->time_data, out);
+    io_::write_mat(ur_driver->joint_pos_data, out);
     io_::write_mat(ur_driver->joint_vel_data, out);
     //io_::write_mat(ur_driver->joint_target_vel_data, out);
+    io_::write_mat(ur_driver->joint_pos_cmd_data, out);
     io_::write_mat(ur_driver->joint_vel_cmd_data, out);
 
     out.close();
@@ -365,7 +369,7 @@ namespace ur_
 
       arma::vec q_dot_cmd = qref_dot; // + click*(qref-q);
 
-      this->setJointsVelocity(q_dot_cmd);
+      this->setJointsVelocity(q_dot_cmd, qref);
 
       // waits for the next tick
       waitNextCycle();
@@ -420,9 +424,10 @@ namespace ur_
     this->movej(qd, 1.4, 1.0, this->cycle);
   }
 
-  void Robot::setJointsVelocity(const arma::vec &dqd)
+  void Robot::setJointsVelocity(const arma::vec &dqd, const arma::vec &qd)
   {
     ur_driver->joint_vel_cmd = dqd;
+    ur_driver->joint_pos_cmd = qd;
     this->speedj(dqd, 6.0, this->cycle);
   }
 

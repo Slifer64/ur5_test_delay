@@ -88,13 +88,16 @@ public:
   ur_::Timer global_timer;
 
   arma::vec joint_vel_cmd;
+	arma::vec joint_pos_cmd;
 
   bool log_data_;
   int n_data;
   arma::rowvec time_data;
+	arma::mat joint_pos_data;
   arma::mat joint_vel_data;
   arma::mat joint_target_vel_data;
   arma::mat joint_vel_cmd_data;
+	arma::mat joint_pos_cmd_data;
 
   bool isEmergencyStopped() const { return sec_interface_->robot_state_.isProtectiveStopped(); }
   bool isRobotConnected() const { return sec_interface_->robot_state_.isRobotConnected(); }

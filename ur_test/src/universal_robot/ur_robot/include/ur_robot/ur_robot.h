@@ -161,7 +161,7 @@ public:
   /** Sets the robot's joint velocities for the next control cycle.
    * @param[in] dqd 6x1 vector with the desired joint velocity values.
    */
-  void setJointsVelocity(const arma::vec &dqd);
+  void setJointsVelocity(const arma::vec &dqd, const arma::vec &qd=arma::vec().zeros(6));
 
   /** Sets the robot's task pose relative to the base for the next control cycle.
    * @param[in] pose 4x4 homogenous transform matrix with robot's desired pose relative to the base.
