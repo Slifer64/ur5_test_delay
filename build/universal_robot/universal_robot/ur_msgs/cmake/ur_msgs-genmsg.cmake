@@ -2,7 +2,7 @@
 
 message(STATUS "ur_msgs: 5 messages, 2 services")
 
-set(MSG_I_FLAGS "-Iur_msgs:/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iur_msgs:/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,39 +17,39 @@ add_custom_target(ur_msgs_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
 add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" ""
 )
 
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
 add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" ""
 )
 
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
 add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" "ur_msgs/Digital:ur_msgs/Analog"
 )
 
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
 add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" ""
 )
 
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
 add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" ""
 )
 
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
 add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" "ur_msgs/Digital:ur_msgs/Analog"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" ""
 )
 
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
 add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "ur_msgs" "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" ""
 )
 
 #
@@ -59,31 +59,31 @@ add_custom_target(_ur_msgs_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_cpp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
   "${MSG_I_FLAGS}"
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_cpp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
-)
-_generate_msg_cpp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_cpp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
+)
+_generate_msg_cpp(ur_msgs
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
@@ -91,13 +91,13 @@ _generate_msg_cpp(ur_msgs
 
 ### Generating Services
 _generate_srv_cpp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
 )
 _generate_srv_cpp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/ur_msgs
@@ -115,19 +115,19 @@ add_custom_target(ur_msgs_generate_messages_cpp
 add_dependencies(ur_msgs_generate_messages ur_msgs_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_cpp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_cpp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_cpp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_cpp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_cpp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_cpp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_cpp _ur_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -140,31 +140,31 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ur_msgs_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_eus(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
   "${MSG_I_FLAGS}"
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_eus(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
-)
-_generate_msg_eus(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_eus(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
+)
+_generate_msg_eus(ur_msgs
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
@@ -172,13 +172,13 @@ _generate_msg_eus(ur_msgs
 
 ### Generating Services
 _generate_srv_eus(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
 )
 _generate_srv_eus(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ur_msgs
@@ -196,19 +196,19 @@ add_custom_target(ur_msgs_generate_messages_eus
 add_dependencies(ur_msgs_generate_messages ur_msgs_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_eus _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_eus _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_eus _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_eus _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_eus _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_eus _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_eus _ur_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -221,31 +221,31 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ur_msgs_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_lisp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
   "${MSG_I_FLAGS}"
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_lisp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
-)
-_generate_msg_lisp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_lisp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
+)
+_generate_msg_lisp(ur_msgs
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
@@ -253,13 +253,13 @@ _generate_msg_lisp(ur_msgs
 
 ### Generating Services
 _generate_srv_lisp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
 )
 _generate_srv_lisp(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/ur_msgs
@@ -277,19 +277,19 @@ add_custom_target(ur_msgs_generate_messages_lisp
 add_dependencies(ur_msgs_generate_messages ur_msgs_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_lisp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_lisp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_lisp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_lisp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_lisp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_lisp _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_lisp _ur_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -302,31 +302,31 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ur_msgs_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_nodejs(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
   "${MSG_I_FLAGS}"
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_nodejs(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
-)
-_generate_msg_nodejs(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_nodejs(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
+)
+_generate_msg_nodejs(ur_msgs
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
@@ -334,13 +334,13 @@ _generate_msg_nodejs(ur_msgs
 
 ### Generating Services
 _generate_srv_nodejs(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
 )
 _generate_srv_nodejs(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/ur_msgs
@@ -358,19 +358,19 @@ add_custom_target(ur_msgs_generate_messages_nodejs
 add_dependencies(ur_msgs_generate_messages ur_msgs_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_nodejs _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_nodejs _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_nodejs _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_nodejs _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_nodejs _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_nodejs _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_nodejs _ur_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -383,31 +383,31 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS ur_msgs_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_py(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg"
   "${MSG_I_FLAGS}"
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg;/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_py(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
-  "${MSG_I_FLAGS}"
-  ""
-  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
-)
-_generate_msg_py(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
 )
 _generate_msg_py(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
+)
+_generate_msg_py(ur_msgs
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
@@ -415,13 +415,13 @@ _generate_msg_py(ur_msgs
 
 ### Generating Services
 _generate_srv_py(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
 )
 _generate_srv_py(ur_msgs
-  "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv"
+  "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/ur_msgs
@@ -439,19 +439,19 @@ add_custom_target(ur_msgs_generate_messages_py
 add_dependencies(ur_msgs_generate_messages ur_msgs_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_py _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/RobotStateRTMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_py _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_py _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Digital.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_py _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/MasterboardDataMsg.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_py _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/IOStates.msg" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetPayload.srv" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_py _ur_msgs_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/ur-pc/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/srv/SetIO.srv" NAME_WE)
+get_filename_component(_filename "/home/slifer/slifer/ur_test/src/universal_robot/universal_robot/ur_msgs/msg/Analog.msg" NAME_WE)
 add_dependencies(ur_msgs_generate_messages_py _ur_msgs_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

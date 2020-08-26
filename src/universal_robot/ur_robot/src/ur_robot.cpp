@@ -67,7 +67,7 @@ namespace ur_
 
     ur_driver_thr = std::thread( [this, &start_ur_driver_sem]()
     {
-      this->ur_driver = new UrDriver(this->robot_ip, this->reverse_port);
+      this->ur_driver = new UrDriver(this->robot_ip, this->reverse_port, 0.002);
       if (!this->ur_driver->start()) throw std::runtime_error("[ur_::Robot::runUrDriver]: Failed to start the UrDriver...\n");
       start_ur_driver_sem.notify();
     	//ros::waitForShutdown();
@@ -428,7 +428,7 @@ namespace ur_
   {
     ur_driver->joint_vel_cmd = dqd;
     ur_driver->joint_pos_cmd = qd;
-    this->speedj(dqd, 10, this->cycle);
+    this->speedj(dqd, 10, 0.012);
   }
 
   void Robot::setTaskPose(const arma::mat &pose)

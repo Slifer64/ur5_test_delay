@@ -444,17 +444,19 @@ void UrDriver::setServojGain(double g)
 void UrDriver::readRTMsg()
 {
 //  static tf::TransformBroadcaster br;
-  unsigned long ctrl_cycle = servoj_time_*1e9;
+  // unsigned long ctrl_cycle = servoj_time_*1e9;
+	unsigned long ctrl_cycle = 0.001*1e9;
   timer.start();
 
   global_timer.start();
 
   n_data = 0;
-  time_data.resize(2000);
-	joint_pos_data.resize(6, 2000);
-  joint_pos_cmd_data.resize(6, 2000);
-  joint_vel_data.resize(6, 2000);
-  joint_vel_cmd_data.resize(6, 2000);
+	int max_n = 10000;
+  time_data.resize(max_n);
+	joint_pos_data.resize(6, max_n);
+  joint_pos_cmd_data.resize(6, max_n);
+  joint_vel_data.resize(6, max_n);
+  joint_vel_cmd_data.resize(6, max_n);
 
   while (keep_alive_)
   {
@@ -525,7 +527,7 @@ void UrDriver::readRTMsg()
 
     unsigned long elaps_time = timer.elapsedNanoSec();
 
-    if (elaps_time < ctrl_cycle) std::this_thread::sleep_for(std::chrono::nanoseconds((unsigned long)(ctrl_cycle-elaps_time)));
+    // if (elaps_time < ctrl_cycle) std::this_thread::sleep_for(std::chrono::nanoseconds((unsigned long)(ctrl_cycle-elaps_time)));
     timer.start();
 
     update_sem.notify();

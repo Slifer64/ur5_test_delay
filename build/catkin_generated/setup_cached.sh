@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/ur-pc/slifer/ur_test/build"
+export CMAKE_PREFIX_PATH="/home/slifer/slifer/ur_test/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/slifer/slifer/ur_test/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/slifer/slifer/ur_test/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/slifer/slifer/ur_test/src:$ROS_PACKAGE_PATH"

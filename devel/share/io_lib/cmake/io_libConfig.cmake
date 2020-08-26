@@ -67,14 +67,14 @@ set(io_lib_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(io_lib_SOURCE_PREFIX /home/ur-pc/slifer/ur_test/src/universal_robot/io_lib)
-  set(io_lib_DEVEL_PREFIX /home/ur-pc/slifer/ur_test/devel)
+  set(io_lib_SOURCE_PREFIX /home/slifer/slifer/ur_test/src/universal_robot/io_lib)
+  set(io_lib_DEVEL_PREFIX /home/slifer/slifer/ur_test/devel)
   set(io_lib_INSTALL_PREFIX "")
   set(io_lib_PREFIX ${io_lib_DEVEL_PREFIX})
 else()
   set(io_lib_SOURCE_PREFIX "")
   set(io_lib_DEVEL_PREFIX "")
-  set(io_lib_INSTALL_PREFIX /home/ur-pc/slifer/ur_test/install)
+  set(io_lib_INSTALL_PREFIX /home/slifer/slifer/ur_test/install)
   set(io_lib_PREFIX ${io_lib_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(io_lib_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/ur-pc/slifer/ur_test/src/universal_robot/io_lib/include " STREQUAL " ")
+if(NOT "/home/slifer/slifer/ur_test/src/universal_robot/io_lib/include " STREQUAL " ")
   set(io_lib_INCLUDE_DIRS "")
-  set(_include_dirs "/home/ur-pc/slifer/ur_test/src/universal_robot/io_lib/include")
+  set(_include_dirs "/home/slifer/slifer/ur_test/src/universal_robot/io_lib/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/ur-pc/slifer/ur_test/src/universal_robot/io_lib/include " STREQUAL
         message(FATAL_ERROR "Project 'io_lib' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'io_lib' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/ur-pc/slifer/ur_test/src/universal_robot/io_lib/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'io_lib' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/slifer/slifer/ur_test/src/universal_robot/io_lib/${idir}'.  ${_report}")
     endif()
     _list_append_unique(io_lib_INCLUDE_DIRS ${include})
   endforeach()
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/ur-pc/slifer/ur_test/devel/lib;/home/ur-pc/slifer/ur_test/devel/lib;/home/ur-pc/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/slifer/slifer/ur_test/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

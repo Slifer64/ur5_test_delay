@@ -1,2 +1,2 @@
 test/ur_test:universal_robot/io_lib:universal_robot/universal_robot/universal_robot:universal_robot/universal_robot/ur_bringup:universal_robot/universal_robot/ur_description:universal_robot/universal_robot/ur_driver:universal_robot/universal_robot/ur_msgs:universal_robot/ur_modern_driver:universal_robot/ur_robot
--DCMAKE_BUILD_TYPE=Release -DCATKIN_DEVEL_PREFIX=/home/ur-pc/slifer/ur_test/devel -DCMAKE_INSTALL_PREFIX=/home/ur-pc/slifer/ur_test/install -G Unix Makefiles
+-DCMAKE_BUILD_TYPE=Release -DCATKIN_DEVEL_PREFIX=/home/slifer/slifer/ur_test/devel -DCMAKE_INSTALL_PREFIX=/home/slifer/slifer/ur_test/install -G Unix Makefiles

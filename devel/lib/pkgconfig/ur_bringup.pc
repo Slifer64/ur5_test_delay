@@ -1,4 +1,4 @@
-prefix=/home/ur-pc/slifer/ur_test/devel
+prefix=/home/slifer/slifer/ur_test/devel
 
 Name: ur_bringup
 Description: Description of ur_bringup

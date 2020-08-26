@@ -35,18 +35,6 @@ for i=1:2
 
     figure;
     hold on;
-    plot(dq_data(i,:), 'LineWidth',1.5, 'Color','blue');
-%     plot(dq_target_data(i,:), 'LineWidth',1.5, 'Color','cyan');
-    plot(dq_cmd_data(i,:), 'LineWidth',1.5, 'Color','magenta');
-    hold off;
-    
-end
-
-
-for i=1:2
-
-    figure;
-    hold on;
     plot(Time, dq_data(i,:), 'LineWidth',1.5, 'Color','blue');
 %     plot(dq_target_data(i,:), 'LineWidth',1.5, 'Color','cyan');
     plot(Time, dq_cmd_data(i,:), 'LineWidth',1.5, 'Color','magenta');
@@ -54,6 +42,7 @@ for i=1:2
     
 end
 
+%% ========== ctrl cycle =============
 
 Ts = diff(Time);
 figure;

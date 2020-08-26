@@ -1,8 +1,8 @@
-prefix=/home/ur-pc/slifer/ur_test/devel
+prefix=/home/slifer/slifer/ur_test/devel
 
 Name: ur_msgs
 Description: Description of ur_msgs
 Version: 1.1.5
-Cflags: -I/home/ur-pc/slifer/ur_test/devel/include
+Cflags: -I/home/slifer/slifer/ur_test/devel/include
 Libs: -L${prefix}/lib 
 Requires: message_runtime std_msgs

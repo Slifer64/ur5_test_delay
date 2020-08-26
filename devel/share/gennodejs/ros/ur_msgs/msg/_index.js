@@ -1,16 +1,16 @@
 
 "use strict";
 
-let Analog = require('./Analog.js');
-let IOStates = require('./IOStates.js');
 let Digital = require('./Digital.js');
+let IOStates = require('./IOStates.js');
 let MasterboardDataMsg = require('./MasterboardDataMsg.js');
+let Analog = require('./Analog.js');
 let RobotStateRTMsg = require('./RobotStateRTMsg.js');
 
 module.exports = {
-  Analog: Analog,
-  IOStates: IOStates,
   Digital: Digital,
+  IOStates: IOStates,
   MasterboardDataMsg: MasterboardDataMsg,
+  Analog: Analog,
   RobotStateRTMsg: RobotStateRTMsg,
 };

@@ -1,8 +1,8 @@
-prefix=/home/ur-pc/slifer/ur_test/devel
+prefix=/home/slifer/slifer/ur_test/devel
 
 Name: io_lib
 Description: Description of io_lib
 Version: 0.0.0
-Cflags: -I/home/ur-pc/slifer/ur_test/src/universal_robot/io_lib/include
+Cflags: -I/home/slifer/slifer/ur_test/src/universal_robot/io_lib/include
 Libs: -L${prefix}/lib 
 Requires: 

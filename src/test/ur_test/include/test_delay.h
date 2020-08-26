@@ -25,8 +25,7 @@ class Worker
 public:
   Worker(const std::string &ip, int port)
   {
-    // robot.reset(new ur_::Robot("10.0.0.1", 50001));
-    robot.reset(new ur_::Robot("localhost", 50001));
+    robot.reset(new ur_::Robot("10.0.0.1", 50001));
   }
 
   void setFreeDriveMode()
@@ -58,8 +57,6 @@ public:
     arma::vec qref = q0;
     arma::vec qref_dot;
 
-    robot->startLogging();
-
     double t = 0.0;
     double click = 0.0;
     // the main while
@@ -78,7 +75,7 @@ public:
       qref = ref_traj.col(0);
       qref_dot = ref_traj.col(1);
 
-      arma::vec q_dot_cmd = qref_dot + click*(qref-q);
+      arma::vec q_dot_cmd = qref_dot; // + click*(qref-q);
 
       robot->setJointsVelocity(q_dot_cmd, qref);
 
@@ -88,12 +85,8 @@ public:
       q = robot->getJointsPosition();
     }
 
-    robot->stopLogging();
-
     // reset last known robot mode
     robot->setMode(prev_mode);
-
-    robot->saveLoggedData(ros::package::getPath("ur_test") + "/data/logged_data.bin");
 
     return true;
   }
@@ -192,10 +185,10 @@ int main(int argc, char** argv)
     ch = getch();
     if (ch == 'f') worker.setFreeDriveMode();
     if (ch == 't') worker.executeTrajectory();
-    if (ch == '1') worker.setJointsTrajectory(q1, 6);  //worker.robot->movej(q1, 1.4, 1.05, 8); //
-    if (ch == '2') worker.setJointsTrajectory(q2, 6); //worker.robot->movej(q1, 1.4, 1.05, 8); //
+    if (ch == '1') worker.robot->movej(q1, 1.4, 1.05, 8); //worker.setJointsTrajectory(q1, 6);
+    if (ch == '2') worker.robot->movej(q1, 1.4, 1.05, 8); //worker.setJointsTrajectory(q2, 6);
     if (ch == 'j') worker.printJointsPos();
-    if (ch == 'q') throw std::runtime_error("Program termination request!");
+    if (ch == 'q') break;
   }
 
   // ===========  Shutdown ROS node  ==================

@@ -1,4 +1,4 @@
-prefix=/home/ur-pc/slifer/ur_test/install
+prefix=/home/slifer/slifer/ur_test/install
 
 Name: io_lib
 Description: Description of io_lib

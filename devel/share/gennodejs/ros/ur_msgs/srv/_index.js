@@ -1,10 +1,10 @@
 
 "use strict";
 
-let SetIO = require('./SetIO.js')
 let SetPayload = require('./SetPayload.js')
+let SetIO = require('./SetIO.js')
 
 module.exports = {
-  SetIO: SetIO,
   SetPayload: SetPayload,
+  SetIO: SetIO,
 };
