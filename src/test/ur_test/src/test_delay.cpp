@@ -124,8 +124,10 @@ public:
     robot->saveLoggedData(ros::package::getPath("ur_test") + "/data/logged_data.bin");
   }
 
-private:
   std::shared_ptr<ur_::Robot> robot;
+
+private:
+
 
   arma::mat get5thOrder(double t, arma::vec p0, arma::vec pT, double totalTime)
   {
@@ -178,11 +180,13 @@ int main(int argc, char** argv)
 
   while (ros::ok())
   {
-    char ch = getch();
+    worker.robot->waitNextCycle();
+    char ch = ' ';
+    ch = getch();
     if (ch == 'f') worker.setFreeDriveMode();
     if (ch == 't') worker.executeTrajectory();
-    if (ch == '1') worker.setJointsTrajectory(q1, 6);
-    if (ch == '2') worker.setJointsTrajectory(q2, 6);
+    if (ch == '1') worker.robot->movej(q1, 1.4, 1.05, 8); //worker.setJointsTrajectory(q1, 6);
+    if (ch == '2') worker.robot->movej(q1, 1.4, 1.05, 8); //worker.setJointsTrajectory(q2, 6);
     if (ch == 'j') worker.printJointsPos();
     if (ch == 'q') break;
   }
