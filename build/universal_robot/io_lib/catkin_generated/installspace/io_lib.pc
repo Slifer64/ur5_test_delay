@@ -1,0 +1,8 @@
+prefix=/home/ur-pc/slifer/ur_test/install
+
+Name: io_lib
+Description: Description of io_lib
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
