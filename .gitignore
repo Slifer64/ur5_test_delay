@@ -1,9 +1,12 @@
+install/deps/armadillo
+install/deps/eigen3
+
+.catkin_workspace
+.idea/
+
 ##---------------------------------------------------
 ## matlab
 ##---------------------------------------------------
-
-# ignore ur simulator
-ur_simulator/
 
 # ignore logged *.bin and *.txt *.dat and *.mat files
 #data/*.bin
@@ -81,8 +84,7 @@ octave-workspace
 ##---------------------------------------------------
 ## Cmake
 ##---------------------------------------------------
-ur_test/src/CMakeLists.txt
-ur_test/.catkin_workspace
+src/CMakeLists.txt
 CMakeCache.txt
 CMakeFiles
 CMakeScripts
@@ -97,12 +99,13 @@ CTestTestfile.cmake
 ##---------------------------------------------------
 ## ROS
 ##---------------------------------------------------
-ur_test/build/
-ur_test/devel/
-ur_test/bin/
+c++/as64_ws/src/CMakeLists.txt
+build/
+devel/
+bin/
 #lib/
-ur_test/msg_gen/
-ur_test/srv_gen/
+msg_gen/
+srv_gen/
 #msg/*Action.msg
 #msg/*ActionFeedback.msg
 #msg/*ActionGoal.msg
@@ -134,14 +137,26 @@ srv/_*.py
 qtcreator-*
 *.user
 
+/planning/cfg
+/planning/docs
+/planning/src
+
+*~
+
+# Emacs
+.#*
+
+# Catkin custom files
+CATKIN_IGNORE
+.catkin_workspace
 
 # Kdevelop files
 *.kdev4
 
 
 # CLion
-ur_test/.idea/
-ur_test/src/.idea/
-ur_test/src/cmake-build-debug/
+.idea/
+src/.idea/
+src/cmake-build-debug/
 
 

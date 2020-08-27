@@ -1,8 +1,0 @@
-prefix=/home/slifer/slifer/ur_test/devel
-
-Name: ur_description
-Description: Description of ur_description
-Version: 1.1.5
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

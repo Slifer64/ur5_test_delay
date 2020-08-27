@@ -178,8 +178,12 @@ int main(int argc, char** argv)
   // ===========  Initialize the ROS node  ==================
   ros::init(argc, argv, "test_ur");
 
+  ros::NodeHandle nh("~");
+  std::string robot_ip;
+  if (nh.getParam("robot_ip",robot_ip)) throw std::runtime_error("Failed to load param \"robot_ip\"...");
+
   // ===========  Create robot  ==================
-  Worker worker("10.0.0.1", 50001);
+  Worker worker(robot_ip, 50001);
   worker.setFreeDriveMode();
 
   arma::vec q1 = {-0.7827,  -1.2511,  -1.4126,  -1.6371,   1.6009,   0.0254};

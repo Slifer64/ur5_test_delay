@@ -50,9 +50,9 @@ SET(BUILD_LIBS
 # *************************************************
 # *************************************************
 
-add_executable(test_delay src/test_delay.cpp ${INCLUDE_LIST} ${SRC_LIST} )
-add_dependencies(test_delay ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-target_link_libraries(test_delay ${BUILD_LIBS} )
+add_executable(test_ur src/test_ur.cpp ${INCLUDE_LIST} ${SRC_LIST} )
+add_dependencies(test_ur ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries(test_ur ${BUILD_LIBS} )
 
 
 # *************************************************

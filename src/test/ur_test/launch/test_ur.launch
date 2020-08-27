@@ -21,8 +21,15 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" required="true"/>
 
     <!-- test node -->
-    <node pkg="ur_test" type="test_delay" name="test_delay"
-          output="screen" cwd="node">
+    <node pkg="ur_test" type="test_ur" name="test_ur_node" output="screen" cwd="node">
+
+      <rosparam>
+
+          robot_ip: "10.0.0.1" # "localhost"
+
+      </rosparam>
+
+
     </node>
 
 </launch>

@@ -1,8 +1,0 @@
-prefix=/home/slifer/slifer/ur_test/devel
-
-Name: ur_driver
-Description: Description of ur_driver
-Version: 1.1.5
-Cflags: -I/home/slifer/slifer/ur_test/devel/include
-Libs: -L${prefix}/lib 
-Requires: dynamic_reconfigure
