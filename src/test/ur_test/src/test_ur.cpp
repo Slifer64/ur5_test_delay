@@ -25,8 +25,7 @@ class Worker
 public:
   Worker(const std::string &ip, int port)
   {
-    // robot.reset(new ur_::Robot("10.0.0.1", 50001));
-    robot.reset(new ur_::Robot("localhost", 50001));
+    robot.reset(new ur_::Robot(ip, port));
   }
 
   void setFreeDriveMode()
@@ -180,8 +179,8 @@ int main(int argc, char** argv)
 
   ros::NodeHandle nh("~");
   std::string robot_ip;
-  if (nh.getParam("robot_ip",robot_ip)) throw std::runtime_error("Failed to load param \"robot_ip\"...");
-
+  if (!nh.getParam("robot_ip",robot_ip)) throw std::runtime_error("Failed to load param \"robot_ip\"...");
+  
   // ===========  Create robot  ==================
   Worker worker(robot_ip, 50001);
   worker.setFreeDriveMode();

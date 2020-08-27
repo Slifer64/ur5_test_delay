@@ -54,7 +54,7 @@ class Robot
 {
 public:
   /** Constructor. */
-  Robot(const std::string &robot_ip="localhost", int reverse_port=50002); 
+  Robot(const std::string &robot_ip="localhost", int reverse_port=50001);
 
   /** Destructor. */
   ~Robot();

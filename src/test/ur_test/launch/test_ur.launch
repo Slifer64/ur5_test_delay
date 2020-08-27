@@ -3,8 +3,6 @@
 <launch>
 
   <!-- Start ur_controller -->
-  <!-- robot_ip: IP-address of the robot's socket-messaging server -->
-  <arg name="robot_ip" default="10.0.0.2"/>
   <arg name="min_payload"  default="0.0"/>
   <arg name="max_payload"  default="10.0"/>
   <arg name="prefix" default="" />
@@ -24,9 +22,7 @@
     <node pkg="ur_test" type="test_ur" name="test_ur_node" output="screen" cwd="node">
 
       <rosparam>
-
           robot_ip: "10.0.0.1" # "localhost"
-
       </rosparam>
 
 
